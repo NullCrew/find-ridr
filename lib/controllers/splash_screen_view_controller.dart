@@ -9,6 +9,6 @@ class SplashViewController extends GetxController{
   }
 
   void startTimer() {
-    Future.delayed(const Duration(seconds: 2),()=>Get.offNamed('/signUp'));
+    Future.delayed(const Duration(seconds: 4),()=>Get.offNamed('/login'));
   }
 }
