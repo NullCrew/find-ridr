@@ -100,7 +100,7 @@ Widget RideCard({int reviewStar}){
                   ],
                 ),
                 SizedBox(height: 10,),
-                CardButton()
+                CardButton(btnText: "Let'\s Go")
               ],
             ),
           ),
