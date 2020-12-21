@@ -1,4 +1,5 @@
 import 'package:findridr/components/action_button.dart';
+import 'package:findridr/components/bottom_navigation_bar.dart';
 import 'package:findridr/components/text_input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -43,7 +44,7 @@ class otpVerificationView extends StatelessWidget {
                               'you received login',style: GoogleFonts.raleway(fontSize: 18,fontWeight: FontWeight.w600),),
                           otpVerificationField.buildInputField(hintText: "Enter the OTP"),
                           loginButton.buildButton(btnText: 'Login',onTap: (){
-                            // Get.to();
+                            Get.to(BottomNavBar());
                           })
                         ],
                       ),

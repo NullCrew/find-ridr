@@ -19,6 +19,8 @@ dependencies:
   http: ^0.12.2
   shared_preferences: ^0.5.12+4
   get: ^3.23.1
+  font_awesome_flutter: ^8.11.0
+
 
 
 dev_dependencies:
@@ -36,5 +38,5 @@ flutter:
   fonts:
       - family:  Rider
         fonts:
-         - asset: fonts/Rider.ttf
+         - asset: assets/Rider.ttf
 
