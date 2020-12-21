@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Widget CardButton({String btnText}){
+Widget CardButton({String btnText,Function onTap}){
   return InkWell(
-    onTap: (){},
+    onTap: onTap,
     child: Container(
       height: 50,
       width: Get.width/1.2,

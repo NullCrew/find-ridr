@@ -38,7 +38,7 @@ class HomeView extends StatelessWidget {
                 SizedBox(height: 30,),
                 Text('Ridrs nearby',style: headingStyle,),
                 Container(
-                  height: 170,
+                  height: 120,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
@@ -53,7 +53,7 @@ class HomeView extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 10,),
+                // SizedBox(height: 10,),
                 Text('Featured Trips',style: headingStyle,),
                 Container(
                     child: ListView(

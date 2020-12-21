@@ -48,7 +48,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       duration: Duration(
         milliseconds: 100,
       ),
-      curve: Curves.easeIn
+      curve: Curves.linearToEaseOut
     );
   }
 

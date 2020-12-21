@@ -1,6 +1,7 @@
 import 'package:findridr/components/card_button.dart';
 import 'package:findridr/constants.dart';
 import 'package:findridr/controllers/ride_card_controller.dart';
+import 'package:findridr/views/ride_info_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -100,7 +101,9 @@ Widget RideCard({int reviewStar}){
                   ],
                 ),
                 SizedBox(height: 10,),
-                CardButton(btnText: "Let'\s Go")
+                CardButton(btnText: "Let'\s Go",onTap: (){
+                  Get.to(RideInfoView());
+                })
               ],
             ),
           ),

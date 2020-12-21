@@ -34,9 +34,18 @@ class GroupView extends StatelessWidget {
                         ],
                       ),
                     ),
-                    GestureDetector(
-                        child: Icon(CupertinoIcons.search, size: 32,
-                          color: Colors.black,))
+                    Row(
+                      children: [
+                        GestureDetector(
+                            child: Icon(CupertinoIcons.search, size: 32,
+                              color: Colors.black,)
+                        ),
+                        SizedBox(width: 20,),
+                        GestureDetector(
+                            child: Icon(CupertinoIcons.plus_app_fill, size: 32,
+                              color: primaryColor,)),
+                      ],
+                    )
                   ],
                 ),
                 SizedBox(height: 30,),
@@ -53,18 +62,18 @@ class GroupView extends StatelessWidget {
                   height: Get.height/4,
                   width: Get.width,
                   child: GridView.count(
-                    mainAxisSpacing: 8,
-                    crossAxisSpacing: 8,
+                    mainAxisSpacing: 15,
+                    crossAxisSpacing: 15,
                     crossAxisCount: 4,
                     children: [
-                      CircleAvatar(radius: 10,),
-                      CircleAvatar(radius: 10,),
-                      CircleAvatar(radius: 10,),
-                      CircleAvatar(radius: 10,),
-                      CircleAvatar(radius: 10,),
-                      CircleAvatar(radius: 10,),
-                      CircleAvatar(radius: 10,),
-                      CircleAvatar(radius: 10,),
+                      CircleAvatar(),
+                      CircleAvatar(),
+                      CircleAvatar(),
+                      CircleAvatar(),
+                      CircleAvatar(),
+                      CircleAvatar(),
+                      CircleAvatar(),
+                      CircleAvatar(),
                     ],
                   ),
                 ),
