@@ -35,7 +35,7 @@ Widget RideCard({int reviewStar}){
                       ],
                     ),
                     GetBuilder(
-                      init: RideCardController(),
+                      init: CardController(),
                       builder: (controller){
                         return InkWell(
                             onTap: (){
@@ -51,7 +51,7 @@ Widget RideCard({int reviewStar}){
                   ],
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       children: [
@@ -74,7 +74,7 @@ Widget RideCard({int reviewStar}){
                           children: [
                             Icon(FontAwesomeIcons.clock),
                             SizedBox(width: 5,),
-                            Text('18 Jan, 5:30 AM',style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.w500),)
+                            Text('18 Jan, 5:30 AM',style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w500),)
                           ],
                         ),
                         SizedBox(height: 5,),
@@ -82,7 +82,7 @@ Widget RideCard({int reviewStar}){
                           children: [
                             Icon(FontAwesomeIcons.mapPin),
                             SizedBox(width: 5,),
-                            Text('D.D Hills',style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.w500),)
+                            Text('D.D Hills',style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w500),)
                           ],
                         ),
                       ],
@@ -91,11 +91,12 @@ Widget RideCard({int reviewStar}){
                       children: [
                         Row(
                           children: [
-                            Text('67',style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.bold)),
+                            Text('67',style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.bold)),
+                            SizedBox(width: 4,),
                             Icon(FontAwesomeIcons.solidCircle,color: Colors.green,),
                           ],
                         ),
-                        Text('Going',style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.bold)),
+                        Text('Going',style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.bold)),
                       ],
                     )
                   ],

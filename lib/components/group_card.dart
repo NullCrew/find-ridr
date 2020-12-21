@@ -35,7 +35,7 @@ Widget GroupCard({int reviewStar}){
                       ],
                     ),
                     GetBuilder(
-                      init: RideCardController(),
+                      init: CardController(),
                       builder: (controller){
                         return InkWell(
                             onTap: (){
