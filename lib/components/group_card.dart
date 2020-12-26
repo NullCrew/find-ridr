@@ -1,6 +1,7 @@
 import 'package:findridr/components/card_button.dart';
 import 'package:findridr/constants.dart';
 import 'package:findridr/controllers/ride_card_controller.dart';
+import 'package:findridr/views/group_info_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -20,7 +21,7 @@ Widget GroupCard({int reviewStar}){
               borderRadius: BorderRadius.circular(15)
           ),
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(5.0),
             child: Column(
               children: [
                 Row(
@@ -77,7 +78,7 @@ Widget GroupCard({int reviewStar}){
                   ],
                 ),
                 SizedBox(height: 10,),
-                CardButton(btnText: "Explore")
+                CardButton(btnText: "Explore",onTap: (){Get.to(GroupInfoView());})
               ],
             ),
           ),

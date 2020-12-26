@@ -7,11 +7,12 @@ import 'package:findridr/views/ride_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:preload_page_view/preload_page_view.dart';
 
 List<BottomNavigationBarItem> navBarItems = [
   BottomNavigationBarItem(
-    icon: Icon(FontAwesomeIcons.motorcycle,color: Colors.black,size: 32,),
-    label: 'Ride',
+    icon: Icon(Rider.sports,color: Colors.black,size: 28,),
+    label: '  Ride',
   ),
   BottomNavigationBarItem(
     icon: Icon(Rider.group,color: Colors.black,size: 32,),
@@ -31,6 +32,15 @@ List<BottomNavigationBarItem> navBarItems = [
   ),
 ];
 
+// ignore: non_constant_identifier_names
+List <Widget>views = [
+  RideView(),
+  GroupView(),
+  HomeView(),
+  EventView(),
+  ProfileView(),
+];
+
 class BottomNavBar extends StatefulWidget {
   @override
   _BottomNavBarState createState() => _BottomNavBarState();
@@ -43,12 +53,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
     setState(() {
       _currentIndex = index;
     });
+
     pageController.animateToPage(
       index,
       duration: Duration(
-        milliseconds: 100,
+        milliseconds: 50,
       ),
-      curve: Curves.linearToEaseOut
+      curve: Curves.elasticOut
     );
   }
 
@@ -64,46 +75,41 @@ class _BottomNavBarState extends State<BottomNavBar> {
         currentIndex: _currentIndex,
         onTap: onTabTapped,
         showUnselectedLabels: false,
-        showSelectedLabels: true,
         items: navBarItems,
         selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.grey,
-        unselectedIconTheme: IconThemeData(color: Colors.grey),
-        selectedLabelStyle: GoogleFonts.raleway(fontSize: 16,color: Colors.black,fontWeight: FontWeight.w600),
+        selectedFontSize: 18,
+        selectedLabelStyle: GoogleFonts.raleway(color: Colors.black,fontWeight: FontWeight.w700),
       ),
     );
   }
 
-  PageController pageController;
+  PreloadPageController pageController;
 
   @override
   void initState() {
     super.initState();
-    pageController = PageController(initialPage: 2);
+    pageController = PreloadPageController(initialPage: 2);
   }
 
 
   @override
   Widget build(BuildContext context) {
-    return  WillPopScope(
-        onWillPop: () {
-          return;
-        },
-        child: Scaffold(
-            body: PageView(
-                controller: pageController,
-                children: <Widget>[
-                  RideView(),
-                  GroupView(),
-                  HomeView(),
-                  EventView(),
-                  ProfileView(),
-                ],
-                onPageChanged: (int index) {
-                  setState(() {
-                    _currentIndex = index;
-                  });
-                }),
-            bottomNavigationBar: navBar()));
+    return  Scaffold(
+        body: Container(
+          child: PreloadPageView.builder(
+              controller: pageController,
+              physics: AlwaysScrollableScrollPhysics(),
+              preloadPagesCount: 5,
+              itemCount: views.length,
+              itemBuilder: (BuildContext context,int position){
+                return views[position];
+              },
+              onPageChanged: (int index) {
+                setState(() {
+                  _currentIndex = index;
+                });
+              }),
+        ),
+        bottomNavigationBar: navBar());
   }
 }

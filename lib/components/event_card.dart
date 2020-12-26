@@ -33,7 +33,7 @@ Widget EventCard({int reviewStar}){
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Offroading for beginners',style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w600)),
+                            Text('Offroading for beginners',style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.w600),softWrap: true,),
                             Text('Indian Riding Group',style: GoogleFonts.poppins(fontSize: 14,fontWeight: FontWeight.w600),),
                           ],
                         )
