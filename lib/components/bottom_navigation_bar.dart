@@ -12,7 +12,7 @@ import 'package:preload_page_view/preload_page_view.dart';
 List<BottomNavigationBarItem> navBarItems = [
   BottomNavigationBarItem(
     icon: Icon(Rider.sports,color: Colors.black,size: 28,),
-    label: '  Ride',
+    label: 'Ride',
   ),
   BottomNavigationBarItem(
     icon: Icon(Rider.group,color: Colors.black,size: 32,),
